@@ -22,18 +22,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        do {
-            try reproductor = AVAudioPlayer(contentsOf: cancion1)
-        } catch {
-            print("Error de cancion")
-        }
+        
+        asignarCancion(url: cancion1)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+    
     @IBAction func reproducir() {
         if !reproductor.isPlaying {
             reproductor.play()
@@ -51,29 +47,30 @@ class ViewController: UIViewController {
         }
     }
 
+    @IBAction func cancionAleatoria() {
+        var numero : Int = 0
+        
+        repeat {
+            numero = Int(arc4random()) % 4
+        } while numero <= 0 && numero > 3
+        
+        cambiarCancion(numero: numero)
+    }
     
     func cambiarCancion(numero : Int) -> Void {
         titulo.text = "Título canción \(numero)"
         portada.image = UIImage(named: "cancion\(numero)")
         
+        detener()
+        
         switch (numero){
-        case 1 : do {
-                try reproductor = AVAudioPlayer(contentsOf: cancion1)
-        }catch {
-            print("Error al cambiar de cancion")
+        case 1 : asignarCancion(url: cancion1)
+        case 2 : asignarCancion(url: cancion2)
+        case 3 : asignarCancion(url: cancion3)
+        default : print("Ninguna canción a reproducir")
         }
-        case 2 : do {
-            try reproductor = AVAudioPlayer(contentsOf: cancion2)
-        }catch {
-            print("Error al cambiar de cancion")
-        }
-        case 3 : do {
-            try reproductor = AVAudioPlayer(contentsOf: cancion3)
-        }catch {
-            print("Error al cambiar de cancion")
-        }
-        default : print("Ninguna canción")
-        }
+        
+        reproducir()
     }
     
     @IBAction func botonCancion1() {
@@ -84,6 +81,14 @@ class ViewController: UIViewController {
     }
     @IBAction func botonCancion3() {
         cambiarCancion(numero: 3)
+    }
+    
+    func asignarCancion(url : URL) -> Void {
+        do {
+            try reproductor = AVAudioPlayer(contentsOf: url)
+        }catch {
+            print("Error al reproducir canción \(url)")
+        }
     }
     
 }
