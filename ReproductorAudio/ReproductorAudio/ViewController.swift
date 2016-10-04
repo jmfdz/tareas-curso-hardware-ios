@@ -48,12 +48,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func cancionAleatoria() {
-        var numero : Int = 0
-        
-        repeat {
-            numero = Int(arc4random()) % 4
-        } while numero <= 0 && numero > 3
-        
+        let numero : Int = Int( arc4random() % 3) + 1        
         cambiarCancion(numero: numero)
     }
     
