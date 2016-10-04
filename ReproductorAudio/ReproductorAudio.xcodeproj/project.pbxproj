@@ -15,6 +15,8 @@
 		425959391DA2DDED00A181C2 /* cancion1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 425959361DA2DDED00A181C2 /* cancion1.m4a */; };
 		4259593A1DA2DDED00A181C2 /* cancion2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 425959371DA2DDED00A181C2 /* cancion2.m4a */; };
 		4259593B1DA2DDED00A181C2 /* cancion3.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 425959381DA2DDED00A181C2 /* cancion3.m4a */; };
+		8CC63DD91DA4261200F60E00 /* cancion4.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8CC63DD71DA4261200F60E00 /* cancion4.m4a */; };
+		8CC63DDA1DA4261200F60E00 /* cancion5.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8CC63DD81DA4261200F60E00 /* cancion5.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		425959361DA2DDED00A181C2 /* cancion1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = cancion1.m4a; sourceTree = "<group>"; };
 		425959371DA2DDED00A181C2 /* cancion2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = cancion2.m4a; sourceTree = "<group>"; };
 		425959381DA2DDED00A181C2 /* cancion3.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = cancion3.m4a; sourceTree = "<group>"; };
+		8CC63DD71DA4261200F60E00 /* cancion4.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = cancion4.m4a; path = ../cancion4.m4a; sourceTree = "<group>"; };
+		8CC63DD81DA4261200F60E00 /* cancion5.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = cancion5.m4a; path = ../cancion5.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 			isa = PBXGroup;
 			children = (
 				425959361DA2DDED00A181C2 /* cancion1.m4a */,
+				8CC63DD71DA4261200F60E00 /* cancion4.m4a */,
+				8CC63DD81DA4261200F60E00 /* cancion5.m4a */,
 				425959371DA2DDED00A181C2 /* cancion2.m4a */,
 				425959381DA2DDED00A181C2 /* cancion3.m4a */,
 				425959231DA2DD8F00A181C2 /* AppDelegate.swift */,
@@ -137,7 +143,9 @@
 				4259592E1DA2DD8F00A181C2 /* LaunchScreen.storyboard in Resources */,
 				4259593B1DA2DDED00A181C2 /* cancion3.m4a in Resources */,
 				4259593A1DA2DDED00A181C2 /* cancion2.m4a in Resources */,
+				8CC63DDA1DA4261200F60E00 /* cancion5.m4a in Resources */,
 				4259592B1DA2DD8F00A181C2 /* Assets.xcassets in Resources */,
+				8CC63DD91DA4261200F60E00 /* cancion4.m4a in Resources */,
 				425959291DA2DD8F00A181C2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +320,7 @@
 				425959341DA2DD8F00A181C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

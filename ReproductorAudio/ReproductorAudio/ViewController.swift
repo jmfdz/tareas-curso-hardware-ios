@@ -17,13 +17,15 @@ class ViewController: UIViewController {
     var cancion1 = URL(fileURLWithPath: Bundle.main.path(forResource: "cancion1", ofType: "m4a")!)
     var cancion2 = URL(fileURLWithPath: Bundle.main.path(forResource: "cancion2", ofType: "m4a")!)
     var cancion3 = URL(fileURLWithPath: Bundle.main.path(forResource: "cancion3", ofType: "m4a")!)
+    var cancion4 = URL(fileURLWithPath: Bundle.main.path(forResource: "cancion4", ofType: "m4a")!)
+    var cancion5 = URL(fileURLWithPath: Bundle.main.path(forResource: "cancion5", ofType: "m4a")!)
     
     var reproductor : AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        asignarCancion(url: cancion1)
+        asignarCancion(url: cancion5)
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,7 +50,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func cancionAleatoria() {
-        let numero : Int = Int( arc4random() % 3) + 1        
+        let numero : Int = Int( arc4random() % 5) + 1
         cambiarCancion(numero: numero)
     }
     
@@ -62,6 +64,9 @@ class ViewController: UIViewController {
         case 1 : asignarCancion(url: cancion1)
         case 2 : asignarCancion(url: cancion2)
         case 3 : asignarCancion(url: cancion3)
+        case 4 : asignarCancion(url: cancion4)
+        case 5 : asignarCancion(url: cancion5)
+            
         default : print("Ninguna canción a reproducir")
         }
         
@@ -84,6 +89,17 @@ class ViewController: UIViewController {
         }catch {
             print("Error al reproducir canción \(url)")
         }
+    }
+    @IBAction func botonCancion4() {
+        cambiarCancion(numero: 4)
+    }
+    @IBAction func botonCancion5() {
+        cambiarCancion(numero: 5)
+    }
+    @IBOutlet weak var volumen: UISlider!
+    @IBAction func botonVolumen(_ sender: UISlider) {
+        print("Volumen \(reproductor.volume)")
+        reproductor.volume = sender.value
     }
     
 }

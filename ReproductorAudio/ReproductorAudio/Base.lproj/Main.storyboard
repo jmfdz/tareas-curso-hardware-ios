@@ -42,15 +42,15 @@
                                     <action selector="botonCancion3" destination="BYZ-38-t0r" eventType="touchUpInside" id="iBs-eH-Lf4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Título canción 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFm-JX-wBo">
-                                <frame key="frameInset" minX="16" minY="58" width="145" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Título canción 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFm-JX-wBo">
+                                <frame key="frameInset" minX="16" minY="96" width="145" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAV-Pg-DcL">
-                                <frame key="frameInset" minX="174" minY="223" width="55" height="30"/>
+                                <frame key="frameInset" minX="154" minY="261" width="55" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Detener"/>
                                 <connections>
@@ -58,31 +58,54 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eq9-RZ-9PY">
-                                <frame key="frameInset" minX="110" minY="223" width="47" height="30"/>
+                                <frame key="frameInset" minX="99" minY="261" width="47" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Pausar"/>
                                 <connections>
                                     <action selector="pausar" destination="BYZ-38-t0r" eventType="touchUpInside" id="NQq-kp-YI3"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cancion1" translatesAutoresizingMaskIntoConstraints="NO" id="oAn-I0-Vr1">
-                                <frame key="frameInset" minX="16" minY="87" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cancion5" translatesAutoresizingMaskIntoConstraints="NO" id="oAn-I0-Vr1">
+                                <frame key="frameInset" minX="16" minY="125" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGa-c2-dVK">
-                                <frame key="frameInset" minX="16" minY="261" width="119" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Canción aleatoria"/>
-                                <connections>
-                                    <action selector="cancionAleatoria" destination="BYZ-38-t0r" eventType="touchUpInside" id="R83-V7-tpF"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esd-Ex-qAQ">
-                                <frame key="frameInset" minX="16" minY="223" width="76" height="30"/>
+                                <frame key="frameInset" minX="16" minY="261" width="76" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Reproducir"/>
                                 <connections>
                                     <action selector="reproducir" destination="BYZ-38-t0r" eventType="touchUpInside" id="WnV-99-qHW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x45-O4-yUF">
+                                <frame key="frameInset" minX="16" minY="58" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Canción 4"/>
+                                <connections>
+                                    <action selector="botonCancion4" destination="BYZ-38-t0r" eventType="touchUpInside" id="29g-UP-6fM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3G5-nZ-U7D">
+                                <frame key="frameInset" minX="100" minY="58" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Canción 5"/>
+                                <connections>
+                                    <action selector="botonCancion5" destination="BYZ-38-t0r" eventType="touchUpInside" id="U45-wj-wpi"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="aIi-fS-YzO">
+                                <frame key="frameInset" minX="14" minY="346" width="118" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="botonVolumen:" destination="BYZ-38-t0r" eventType="valueChanged" id="xyM-XL-FbI"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGa-c2-dVK">
+                                <frame key="frameInset" minX="16" minY="299" width="119" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Canción aleatoria"/>
+                                <connections>
+                                    <action selector="cancionAleatoria" destination="BYZ-38-t0r" eventType="touchUpInside" id="R83-V7-tpF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -91,6 +114,7 @@
                     <connections>
                         <outlet property="portada" destination="oAn-I0-Vr1" id="1BJ-z3-B1P"/>
                         <outlet property="titulo" destination="SFm-JX-wBo" id="sfL-fV-wpI"/>
+                        <outlet property="volumen" destination="aIi-fS-YzO" id="ELS-Jy-0az"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -99,6 +123,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cancion1" width="200" height="158"/>
+        <image name="cancion5" width="100" height="75"/>
     </resources>
 </document>
