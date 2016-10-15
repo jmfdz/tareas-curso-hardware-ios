@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="H1p-Uh-vWS">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Master-->
+        <scene sceneID="pY4-Hu-kfo">
+            <objects>
+                <navigationController title="Master" id="RMx-3f-FxP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Pmd-2v-anx">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7bK-jq-Zjz" kind="relationship" relationship="rootViewController" id="tsl-Nk-0bq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8fS-aE-onr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-38" y="-630"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="yUG-lL-AsK">
+            <objects>
+                <viewController title="Detail" id="JEX-9P-axG" customClass="DetailViewController" customModule="AudioPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SYR-Wa-9uf"/>
+                        <viewControllerLayoutGuide type="bottom" id="GAO-Cl-Wes"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="svH-Pt-448">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo de la cancion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLM-Lz-7tg">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="la_bicicleta" translatesAutoresizingMaskIntoConstraints="NO" id="hmV-wy-VQH">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="8Oc-lh-fST"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wS4-Ig-vvQ">
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="reproducir" destination="JEX-9P-axG" eventType="touchUpInside" id="aAQ-in-xMO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNF-Op-moQ">
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="pausa" destination="JEX-9P-axG" eventType="touchUpInside" id="Nqq-n3-yTZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gG-fn-C25">
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="detener" destination="JEX-9P-axG" eventType="touchUpInside" id="u0H-tX-Waz"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="bl2-Qu-jwI">
+                                <connections>
+                                    <action selector="volumen:" destination="JEX-9P-axG" eventType="valueChanged" id="TqA-nh-KRX"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzK-pV-soe">
+                                <state key="normal" title="Siguiente canción"/>
+                                <connections>
+                                    <action selector="detener" destination="JEX-9P-axG" eventType="touchUpInside" id="vn3-vE-1mZ"/>
+                                    <action selector="siguiente" destination="JEX-9P-axG" eventType="touchUpInside" id="w8o-Xj-ah9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NNF-Op-moQ" firstAttribute="baseline" secondItem="0gG-fn-C25" secondAttribute="baseline" id="3Px-ND-fif"/>
+                            <constraint firstItem="wS4-Ig-vvQ" firstAttribute="baseline" secondItem="NNF-Op-moQ" secondAttribute="baseline" id="6Ad-Ph-JBr"/>
+                            <constraint firstItem="bl2-Qu-jwI" firstAttribute="top" secondItem="lzK-pV-soe" secondAttribute="top" id="6ad-ov-gEs"/>
+                            <constraint firstItem="NNF-Op-moQ" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="9aN-Ov-SGI"/>
+                            <constraint firstItem="NNF-Op-moQ" firstAttribute="top" secondItem="hmV-wy-VQH" secondAttribute="bottom" constant="62" id="GKO-vP-yQO"/>
+                            <constraint firstItem="hmV-wy-VQH" firstAttribute="top" secondItem="sLM-Lz-7tg" secondAttribute="bottom" constant="37" id="M7y-Ra-xDn"/>
+                            <constraint firstItem="sLM-Lz-7tg" firstAttribute="leading" secondItem="wS4-Ig-vvQ" secondAttribute="leading" id="MJ6-8Y-loX"/>
+                            <constraint firstItem="0gG-fn-C25" firstAttribute="leading" secondItem="NNF-Op-moQ" secondAttribute="trailing" constant="54" id="S2T-uz-WPa"/>
+                            <constraint firstItem="sLM-Lz-7tg" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="45" id="ShB-qt-K38"/>
+                            <constraint firstItem="sLM-Lz-7tg" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="U2V-Ie-OsB"/>
+                            <constraint firstItem="bl2-Qu-jwI" firstAttribute="top" secondItem="wS4-Ig-vvQ" secondAttribute="bottom" constant="19" id="WKU-U9-Yuk"/>
+                            <constraint firstItem="lzK-pV-soe" firstAttribute="leading" secondItem="bl2-Qu-jwI" secondAttribute="trailing" constant="76" id="d4I-fR-iyc"/>
+                            <constraint firstItem="lzK-pV-soe" firstAttribute="trailing" secondItem="svH-Pt-448" secondAttribute="trailingMargin" id="e20-41-TKY"/>
+                            <constraint firstItem="hmV-wy-VQH" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="mOI-Fa-5Vh"/>
+                            <constraint firstItem="bl2-Qu-jwI" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" id="oag-iD-kZ0"/>
+                            <constraint firstItem="NNF-Op-moQ" firstAttribute="leading" secondItem="wS4-Ig-vvQ" secondAttribute="trailing" constant="62" id="p0l-nz-tac"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Ramillete Music" id="mOI-FS-AaM"/>
+                    <connections>
+                        <outlet property="portada" destination="hmV-wy-VQH" id="w9G-5y-GHx"/>
+                        <outlet property="titulo" destination="sLM-Lz-7tg" id="0As-GG-T6K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="708" y="128.18590704647679"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="Nki-YV-4Qg">
+            <objects>
+                <splitViewController id="H1p-Uh-vWS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <connections>
+                        <segue destination="RMx-3f-FxP" kind="relationship" relationship="masterViewController" id="BlO-5A-QYV"/>
+                        <segue destination="vC3-pB-5Vb" kind="relationship" relationship="detailViewController" id="Tll-UG-LXB"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZU-Oi-B1e" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-856" y="-330"/>
+        </scene>
+        <!--Master-->
+        <scene sceneID="smW-Zh-WAh">
+            <objects>
+                <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="AudioPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Arm-wq-HPj" style="IBUITableViewCellStyleDefault" id="WCw-Qf-5nD">
+                                <rect key="frame" x="0.0" y="86" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
+                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Arm-wq-HPj">
+                                            <frame key="frameInset" minX="15" width="345" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="6S0-TO-JiA"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="7bK-jq-Zjz" id="Gho-Na-rnu"/>
+                            <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Ramillete Music" id="Zdf-7t-Un8">
+                        <barButtonItem key="rightBarButtonItem" title="Aleatorio" id="Kcc-Pd-QoD">
+                            <connections>
+                                <segue destination="vC3-pB-5Vb" kind="show" identifier="showAleatorio" id="PbB-74-tCp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="709" y="-630"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="r7l-gg-dq7">
+            <objects>
+                <navigationController id="vC3-pB-5Vb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="DjV-YW-jjY">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="JEX-9P-axG" kind="relationship" relationship="rootViewController" id="GKi-kA-LjT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-45" y="129"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="la_bicicleta" width="100" height="75"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="PbB-74-tCp"/>
+    </inferredMetricsTieBreakers>
+</document>
