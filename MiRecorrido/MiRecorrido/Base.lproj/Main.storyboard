@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mi Recorrido-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Mi Recorrido" id="BYZ-38-t0r" customClass="ViewController" customModule="MiRecorrido" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LSM-rf-Mvh"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dZ-ba-kOw">
+                                <state key="normal" title="Mapa">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="mapaNormal" destination="BYZ-38-t0r" eventType="touchUpInside" id="7xw-Yu-8Be"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dhp-vE-6Tp">
+                                <state key="normal" title="Satélite">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="mapaSatelite" destination="BYZ-38-t0r" eventType="touchUpInside" id="eaB-NI-jbu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RN3-4g-Gi4">
+                                <state key="normal" title="Mixto">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="mapaHibrido" destination="BYZ-38-t0r" eventType="touchUpInside" id="niD-EA-rCJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="LSM-rf-Mvh" secondAttribute="trailing" id="4dz-LY-yeh"/>
+                            <constraint firstItem="LSM-rf-Mvh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="54I-dS-oCI"/>
+                            <constraint firstItem="5dZ-ba-kOw" firstAttribute="baseline" secondItem="Dhp-vE-6Tp" secondAttribute="baseline" id="OMB-Se-neF"/>
+                            <constraint firstItem="Dhp-vE-6Tp" firstAttribute="leading" secondItem="5dZ-ba-kOw" secondAttribute="trailing" constant="8" symbolic="YES" id="eZR-oh-HG4"/>
+                            <constraint firstItem="Dhp-vE-6Tp" firstAttribute="baseline" secondItem="RN3-4g-Gi4" secondAttribute="baseline" id="h4n-Rc-RnN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5dZ-ba-kOw" secondAttribute="bottom" constant="8" symbolic="YES" id="iN2-oH-OKz"/>
+                            <constraint firstItem="RN3-4g-Gi4" firstAttribute="leading" secondItem="Dhp-vE-6Tp" secondAttribute="trailing" constant="8" symbolic="YES" id="iZf-v2-l5s"/>
+                            <constraint firstItem="LSM-rf-Mvh" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="j5Z-mS-tfP"/>
+                            <constraint firstItem="LSM-rf-Mvh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qS5-Ig-TRH"/>
+                            <constraint firstItem="5dZ-ba-kOw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xET-Kg-CbR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapa" destination="LSM-rf-Mvh" id="h4Q-M5-NlN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.125" y="137.32394366197184"/>
+        </scene>
+    </scenes>
+</document>
